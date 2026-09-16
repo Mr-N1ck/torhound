@@ -118,10 +118,6 @@ options:
 
 > **Note:** Sample PCAPs, triage logs, and generated HTML report previews are located in [`docs/`](docs/) and [`poc/`](poc/).
 
-<!-- User Demo Placement Zone -->
-```
-[ Drop your demo.gif or demo.mp4 recording here: docs/demo.gif ]
-```
 
 ---
 
