@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PCAP Forensics Report — innocent_user_dns.pcapng</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card-bg: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --accent: #58a6ff;
+      --danger: #f85149;
+      --warning: #d29922;
+      --success: #3fb950;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 30px 20px;
+    }
+    .container { max-width: 1100px; margin: 0 auto; }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    h1 { font-size: 24px; color: #fff; font-weight: 700; }
+    .badge {
+      background: #1f6feb22;
+      color: var(--accent);
+      border: 1px solid #1f6feb;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 25px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .card-title { font-size: 12px; text-transform: uppercase; color: #8b949e; margin-bottom: 8px; }
+    .card-value { font-size: 26px; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+    .card-value.danger { color: var(--danger); }
+    .card-value.warning { color: var(--warning); }
+    .card-value.success { color: var(--success); }
+    section { margin-bottom: 30px; }
+    h2 { font-size: 18px; color: #fff; margin-bottom: 12px; border-left: 3px solid var(--accent); padding-left: 10px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      font-size: 13px;
+    }
+    th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+    th { background: #21262d; color: #8b949e; font-weight: 600; text-transform: uppercase; font-size: 11px; }
+    tr:last-child td { border-bottom: none; }
+    code { font-family: 'JetBrains Mono', monospace; color: var(--accent); background: #21262d; padding: 2px 6px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>PCAP Forensics Triage Report</h1>
+        <p style="color: #8b949e; font-size: 13px; margin-top: 4px;">Target: <code>innocent_user_dns.pcapng</code></p>
+      </div>
+      <span class="badge">DFIR Triage v2.0</span>
+    </header>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-title">Total Packets</div>
+        <div class="card-value">260</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Tor Threat Hits</div>
+        <div class="card-value success">0</div>
+      </div>
+      <div class="card">
+        <div class="card-title">DGA / C2 Tunneling</div>
+        <div class="card-value danger">28</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Cleartext Credentials</div>
+        <div class="card-value success">0</div>
+      </div>
+    </div>
+
+    
+
+    <section><h2>⚠️ Suspicious High-Entropy DNS (DGA / Tunneling)</h2><table><thead><tr><th>Packet #</th><th>Queried Domain</th><th>Entropy</th><th>Client IP</th></tr></thead><tbody><tr><td><code>3</code></td><td><code>star-mini.c10r.facebook.com</code></td><td style='color:var(--danger);font-weight:600'>3.93 bits</td><td><code>10.40.2.135</code></td></tr><tr><td><code>4</code></td><td><code>star-mini.c10r.facebook.com</code></td><td style='color:var(--danger);font-weight:600'>3.93 bits</td><td><code>10.40.2.135</code></td></tr><tr><td><code>15</code></td><td><code>star-mini.c10r.facebook.com</code></td><td style='color:var(--danger);font-weight:600'>3.93 bits</td><td><code>10.40.2.123</code></td></tr><tr><td><code>18</code></td><td><code>star-mini.c10r.facebook.com</code></td><td style='color:var(--danger);font-weight:600'>3.93 bits</td><td><code>10.40.2.123</code></td></tr><tr><td><code>113</code></td><td><code>ogads-pa.clients6.google.com</code></td><td style='color:var(--danger);font-weight:600'>3.825 bits</td><td><code>10.40.2.135</code></td></tr><tr><td><code>114</code></td><td><code>ogads-pa.clients6.google.com</code></td><td style='color:var(--danger);font-weight:600'>3.825 bits</td><td><code>10.40.2.135</code></td></tr><tr><td><code>115</code></td><td><code>waa-pa.clients6.google.com</code></td><td style='color:var(--danger);font-weight:600'>3.844 bits</td><td><code>10.40.2.135</code></td></tr><tr><td><code>116</code></td><td><code>waa-pa.clients6.google.com</code></td><td style='color:var(--danger);font-weight:600'>3.844 bits</td><td><code>10.40.2.135</code></td></tr><tr><td><code>117</code></td><td><code>ogads-pa.clients6.google.com</code></td><td style='color:var(--danger);font-weight:600'>3.825 bits</td><td><code>10.40.2.123</code></td></tr><tr><td><code>118</code></td><td><code>ogads-pa.clients6.google.com</code></td><td style='color:var(--danger);font-weight:600'>3.825 bits</td><td><code>10.40.2.123</code></td></tr><tr><td><code>119</code></td><td><code>waa-pa.clients6.google.com</code></td><td style='color:var(--danger);font-weight:600'>3.844 bits</td><td><code>10.40.2.123</code></td></tr><tr><td><code>120</code></td><td><code>waa-pa.clients6.google.com</code></td><td style='color:var(--danger);font-weight:600'>3.844 bits</td><td><code>10.40.2.123</code></td></tr><tr><td><code>163</code></td><td><code>cdn.prod.website-files.com</code></td><td style='color:var(--danger);font-weight:600'>3.95 bits</td><td><code>10.40.2.135</code></td></tr><tr><td><code>164</code></td><td><code>cdn.prod.website-files.com</code></td><td style='color:var(--danger);font-weight:600'>3.95 bits</td><td><code>10.40.2.135</code></td></tr><tr><td><code>169</code></td><td><code>d3e54v103j8qbb.cloudfront.net</code></td><td style='color:var(--danger);font-weight:600'>4.306 bits</td><td><code>10.40.2.135</code></td></tr><tr><td><code>170</code></td><td><code>d3e54v103j8qbb.cloudfront.net</code></td><td style='color:var(--danger);font-weight:600'>4.306 bits</td><td><code>10.40.2.135</code></td></tr><tr><td><code>173</code></td><td><code>cdn.prod.website-files.com</code></td><td style='color:var(--danger);font-weight:600'>3.95 bits</td><td><code>10.40.2.123</code></td></tr><tr><td><code>174</code></td><td><code>cdn.prod.website-files.com</code></td><td style='color:var(--danger);font-weight:600'>3.95 bits</td><td><code>10.40.2.123</code></td></tr><tr><td><code>178</code></td><td><code>d3e54v103j8qbb.cloudfront.net</code></td><td style='color:var(--danger);font-weight:600'>4.306 bits</td><td><code>10.40.2.123</code></td></tr><tr><td><code>181</code></td><td><code>d3e54v103j8qbb.cloudfront.net</code></td><td style='color:var(--danger);font-weight:600'>4.306 bits</td><td><code>10.40.2.123</code></td></tr><tr><td><code>239</code></td><td><code>intake-analytics.wikimedia.org</code></td><td style='color:var(--danger);font-weight:600'>3.92 bits</td><td><code>10.40.2.135</code></td></tr><tr><td><code>240</code></td><td><code>intake-analytics.wikimedia.org</code></td><td style='color:var(--danger);font-weight:600'>3.92 bits</td><td><code>10.40.2.135</code></td></tr><tr><td><code>241</code></td><td><code>intake-analytics.wikimedia.org</code></td><td style='color:var(--danger);font-weight:600'>3.92 bits</td><td><code>10.40.2.123</code></td></tr><tr><td><code>242</code></td><td><code>intake-analytics.wikimedia.org</code></td><td style='color:var(--danger);font-weight:600'>3.92 bits</td><td><code>10.40.2.123</code></td></tr><tr><td><code>249</code></td><td><code>encrypted-tbn0.gstatic.com</code></td><td style='color:var(--danger);font-weight:600'>3.979 bits</td><td><code>10.40.2.135</code></td></tr><tr><td><code>250</code></td><td><code>encrypted-tbn0.gstatic.com</code></td><td style='color:var(--danger);font-weight:600'>3.979 bits</td><td><code>10.40.2.135</code></td></tr><tr><td><code>251</code></td><td><code>encrypted-tbn0.gstatic.com</code></td><td style='color:var(--danger);font-weight:600'>3.979 bits</td><td><code>10.40.2.123</code></td></tr><tr><td><code>252</code></td><td><code>encrypted-tbn0.gstatic.com</code></td><td style='color:var(--danger);font-weight:600'>3.979 bits</td><td><code>10.40.2.123</code></td></tr></tbody></table></section>
+
+    
+
+    <footer style="margin-top: 40px; text-align: center; color: #8b949e; font-size: 12px;">
+      Generated by PCAP Forensics Suite · Prince Gaur · <a href="https://github.com/Mr-N1ck/pcap-analyzer" style="color: var(--accent); text-decoration: none;">GitHub</a>
+    </footer>
+  </div>
+</body>
+</html>

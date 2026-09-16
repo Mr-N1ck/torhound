@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "pcap_file": "innocent_user_dns.pcapng",
+    "timestamp": "2026-09-16T05:16:33.170937+00:00",
+    "total_packets": 260,
+    "total_bytes": 27560,
+    "analyzer": "PCAP Forensics Suite v2.0"
+  },
+  "summary": {
+    "tor_hits": 0,
+    "dga_dns_hits": 28,
+    "cleartext_credentials": 0,
+    "suspicious_ports": 0
+  },
+  "findings": {
+    "tor_matches": [],
+    "dga_dns": [
+      {
+        "packet": 3,
+        "domain": "star-mini.c10r.facebook.com",
+        "entropy": 3.93,
+        "subdomain_len": 9,
+        "src": "10.40.2.135"
+      },
+      {
+        "packet": 4,
+        "domain": "star-mini.c10r.facebook.com",
+        "entropy": 3.93,
+        "subdomain_len": 9,
+        "src": "10.40.2.135"
+      },
+      {
+        "packet": 15,
+        "domain": "star-mini.c10r.facebook.com",
+        "entropy": 3.93,
+        "subdomain_len": 9,
+        "src": "10.40.2.123"
+      },
+      {
+        "packet": 18,
+        "domain": "star-mini.c10r.facebook.com",
+        "entropy": 3.93,
+        "subdomain_len": 9,
+        "src": "10.40.2.123"
+      },
+      {
+        "packet": 113,
+        "domain": "ogads-pa.clients6.google.com",
+        "entropy": 3.825,
+        "subdomain_len": 8,
+        "src": "10.40.2.135"
+      },
+      {
+        "packet": 114,
+        "domain": "ogads-pa.clients6.google.com",
+        "entropy": 3.825,
+        "subdomain_len": 8,
+        "src": "10.40.2.135"
+      },
+      {
+        "packet": 115,
+        "domain": "waa-pa.clients6.google.com",
+        "entropy": 3.844,
+        "subdomain_len": 6,
+        "src": "10.40.2.135"
+      },
+      {
+        "packet": 116,
+        "domain": "waa-pa.clients6.google.com",
+        "entropy": 3.844,
+        "subdomain_len": 6,
+        "src": "10.40.2.135"
+      },
+      {
+        "packet": 117,
+        "domain": "ogads-pa.clients6.google.com",
+        "entropy": 3.825,
+        "subdomain_len": 8,
+        "src": "10.40.2.123"
+      },
+      {
+        "packet": 118,
+        "domain": "ogads-pa.clients6.google.com",
+        "entropy": 3.825,
+        "subdomain_len": 8,
+        "src": "10.40.2.123"
+      },
+      {
+        "packet": 119,
+        "domain": "waa-pa.clients6.google.com",
+        "entropy": 3.844,
+        "subdomain_len": 6,
+        "src": "10.40.2.123"
+      },
+      {
+        "packet": 120,
+        "domain": "waa-pa.clients6.google.com",
+        "entropy": 3.844,
+        "subdomain_len": 6,
+        "src": "10.40.2.123"
+      },
+      {
+        "packet": 163,
+        "domain": "cdn.prod.website-files.com",
+        "entropy": 3.95,
+        "subdomain_len": 3,
+        "src": "10.40.2.135"
+      },
+      {
+        "packet": 164,
+        "domain": "cdn.prod.website-files.com",
+        "entropy": 3.95,
+        "subdomain_len": 3,
+        "src": "10.40.2.135"
+      },
+      {
+        "packet": 169,
+        "domain": "d3e54v103j8qbb.cloudfront.net",
+        "entropy": 4.306,
+        "subdomain_len": 14,
+        "src": "10.40.2.135"
+      },
+      {
+        "packet": 170,
+        "domain": "d3e54v103j8qbb.cloudfront.net",
+        "entropy": 4.306,
+        "subdomain_len": 14,
+        "src": "10.40.2.135"
+      },
+      {
+        "packet": 173,
+        "domain": "cdn.prod.website-files.com",
+        "entropy": 3.95,
+        "subdomain_len": 3,
+        "src": "10.40.2.123"
+      },
+      {
+        "packet": 174,
+        "domain": "cdn.prod.website-files.com",
+        "entropy": 3.95,
+        "subdomain_len": 3,
+        "src": "10.40.2.123"
+      },
+      {
+        "packet": 178,
+        "domain": "d3e54v103j8qbb.cloudfront.net",
+        "entropy": 4.306,
+        "subdomain_len": 14,
+        "src": "10.40.2.123"
+      },
+      {
+        "packet": 181,
+        "domain": "d3e54v103j8qbb.cloudfront.net",
+        "entropy": 4.306,
+        "subdomain_len": 14,
+        "src": "10.40.2.123"
+      },
+      {
+        "packet": 239,
+        "domain": "intake-analytics.wikimedia.org",
+        "entropy": 3.92,
+        "subdomain_len": 16,
+        "src": "10.40.2.135"
+      },
+      {
+        "packet": 240,
+        "domain": "intake-analytics.wikimedia.org",
+        "entropy": 3.92,
+        "subdomain_len": 16,
+        "src": "10.40.2.135"
+      },
+      {
+        "packet": 241,
+        "domain": "intake-analytics.wikimedia.org",
+        "entropy": 3.92,
+        "subdomain_len": 16,
+        "src": "10.40.2.123"
+      },
+      {
+        "packet": 242,
+        "domain": "intake-analytics.wikimedia.org",
+        "entropy": 3.92,
+        "subdomain_len": 16,
+        "src": "10.40.2.123"
+      },
+      {
+        "packet": 249,
+        "domain": "encrypted-tbn0.gstatic.com",
+        "entropy": 3.979,
+        "subdomain_len": 14,
+        "src": "10.40.2.135"
+      },
+      {
+        "packet": 250,
+        "domain": "encrypted-tbn0.gstatic.com",
+        "entropy": 3.979,
+        "subdomain_len": 14,
+        "src": "10.40.2.135"
+      },
+      {
+        "packet": 251,
+        "domain": "encrypted-tbn0.gstatic.com",
+        "entropy": 3.979,
+        "subdomain_len": 14,
+        "src": "10.40.2.123"
+      },
+      {
+        "packet": 252,
+        "domain": "encrypted-tbn0.gstatic.com",
+        "entropy": 3.979,
+        "subdomain_len": 14,
+        "src": "10.40.2.123"
+      }
+    ],
+    "cleartext_credentials": [],
+    "suspicious_ports": [],
+    "tls_snis": []
+  },
+  "mitre_attack_mapping": [
+    {
+      "technique_id": "T1071.004",
+      "tactic": "Command and Control",
+      "name": "DNS Data Exfiltration & DGA"
+    },
+    {
+      "technique_id": "T1090.003",
+      "tactic": "Command and Control",
+      "name": "Multi-hop Proxy (Tor)"
+    },
+    {
+      "technique_id": "T1552.001",
+      "tactic": "Credential Access",
+      "name": "Credentials In Files or Cleartext Protocols"
+    }
+  ]
+}

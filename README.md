@@ -114,10 +114,15 @@ options:
 
 ---
 
-## 🎥 Proof of Concept & Artifacts
+## 🎥 Proof of Concept & Triage Demonstration
 
-> **Note:** Sample PCAPs, triage logs, and generated HTML report previews are located in [`docs/`](docs/) and [`poc/`](poc/).
+![TorHound Triage Execution](docs/demo.gif)
 
+### 📊 Interactive Forensic Report Previews
+- **Live HTML Triage Report:** [`docs/report.html`](docs/report.html)
+- **SIEM JSON Artifact:** [`docs/report.json`](docs/report.json)
+- **High-Resolution Terminal Capture:** [`docs/preview.png`](docs/preview.png)
+- **High-Definition Demo Video:** [`docs/demo.mp4`](docs/demo.mp4)
 
 ---
 
