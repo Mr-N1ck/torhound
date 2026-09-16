@@ -1,0 +1,17 @@
+# Core source code protection & secrets
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.log
+*.sqlite
+.env
+.env.*
+secrets/
+credentials/
+*.key
+*.pem
